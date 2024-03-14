@@ -20,6 +20,10 @@ mongoose.connect('mongodb+srv://leojomar01:442RXm249VzWh2Jb@cluster0.kbueheb.mon
     console.log("database connected")
 })
 
+
+app.get("/",(res,req)=>{
+    res.json("hello");
+    )}
 app.post('/create',(req,res)=>{
     console.log(req.body.values)
     ToDoList.create(req.body.values)
