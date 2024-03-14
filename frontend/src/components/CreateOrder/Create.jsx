@@ -13,7 +13,7 @@ function Create() {
 
   const Submit =(e)=>{
     e.preventDefault();
-    axios.post('http://localhost:3001/create',{color,size,number,comment})
+    axios.post('jaa-3294-api.vercel.app',{color,size,number,comment})
     .then(result => {console.log(result)
       // navigate('/')
     })
@@ -21,7 +21,7 @@ function Create() {
 
   }
   useEffect(()=>{
-    axios.get(`http://localhost:3001/${fcolor}`)
+    axios.get(`jaa-3294-api.vercel.app/${fcolor}`)
     .then(result => {console.log(result.data)
     })
     .catch(err => console.log(err))
