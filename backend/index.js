@@ -8,8 +8,8 @@ const ToDoList = require('./models/ToDoList');
 const app = express();
 app.use(cors(
     {
-        origin:[""],
-        methods:["POST","GET"],
+        origin:(""),
+        methods:('POST',"GET"),
         credentials: true
     }
 ))
@@ -20,10 +20,6 @@ mongoose.connect('mongodb+srv://leojomar01:442RXm249VzWh2Jb@cluster0.kbueheb.mon
     console.log("database connected")
 })
 
-
-app.get("/",(res,req)=>{
-    res.json("hello");
-    )}
 app.post('/create',(req,res)=>{
     console.log(req.body.values)
     ToDoList.create(req.body.values)
