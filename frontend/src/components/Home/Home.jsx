@@ -22,7 +22,7 @@ function Home() {
         <div className="dateToday">{`Date Today: ${dateToday}  `}</div>
       </nav>
 
-      <Body/>
+      //<Body/>
       {showTodo?<Todo handleShowTodo={handleShowTodo}/>:null}
 
 
