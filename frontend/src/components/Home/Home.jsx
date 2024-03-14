@@ -19,8 +19,9 @@ function Home() {
           Create New
         </div>
 
-        <div className="dateToday">{`Date Today: ${dateToday}  `}</div>
       </nav>
+
+      <div>TEST</div>
 
       //<Body/>
       {showTodo?<Todo handleShowTodo={handleShowTodo}/>:null}
