@@ -31,13 +31,18 @@ function Body() {
         cancelbtn[e].hidden = true
     }
 
-    useEffect(  ()=>{
-         axios.get('jaa-3294-api.vercel.app/getTodos')
+
+
+    async function getTosos(){
+        await axios.get('https://jaa-3294-api.vercel.app//getTodos')
         .then(res => {
             console.log(res.data)
             setList(res.data)
         })
         .catch(err => console.log(err))
+    }
+    useEffect(  ()=>{
+        getTosos()
       },[])
 
       const handleSubmit = (status,id)=>{
