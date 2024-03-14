@@ -47,14 +47,14 @@ function Body() {
 
       const handleSubmit = (status,id)=>{
         if(window.confirm('Are you Sure u want to save?')){
-            axios.put('jaa-3294-api.vercel.app/updateRecord/'+id,{status})
+            axios.put('https://jaa-3294-api.vercel.app/updateRecord/'+id,{status})
              window.location.reload()
         }
       }
 
       const handleDelete = (id)=>{
         if(window.confirm('Are you Sure u to delete this record?')){
-            axios.put('jaa-3294-api.vercel.app/deleteRecord/'+id)
+            axios.put('https://jaa-3294-api.vercel.app/deleteRecord/'+id)
              window.location.reload()
         }
       }
