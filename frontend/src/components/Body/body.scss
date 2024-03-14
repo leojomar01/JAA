@@ -1,0 +1,135 @@
+#body{
+    display: grid;
+    min-height: 90vh;
+    padding: 1%;
+    padding-top: 13vh;
+    min-width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    
+    .card {
+        margin: 1vh;
+        border-radius:1%;
+        padding: 5%;
+        padding-top: 15%;
+        width: 25vw;
+        max-height: 55vh;;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: grid;
+        box-shadow: 5px 5px 15px black;
+        position: relative;
+
+        #title{
+            font-size: 1.2rem;
+        }
+
+
+        &::after{
+            content: '';
+            border-radius: 1% 1% 0 0;
+            width: 100%;
+            background-color: rgba(0, 38, 253, 0.6);
+            height: 13%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+        }
+        &::before{
+            content: '';
+            border-radius: 1% 1% 0 0;
+            width: 100%;
+            background-color: rgba(255, 0, 212, 0.6);
+            height: 5%;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+
+     
+        .edit{
+            display: inline-block;
+        }
+        div{
+            margin-bottom: .6rem;
+            font-weight: bold;
+
+            textarea{
+                resize: none;
+                outline: none;
+                border: none;
+                cursor: auto;
+                padding: .5rem;
+            }
+
+            input[type="text"]{
+                border: none;
+                background-color: transparent;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+
+            input[type="button"]{
+                width: 5rem;
+                padding: .2rem .5rem;
+                margin: .1rem .5rem;
+                border-radius: .2rem;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                font-weight: 800;
+                box-shadow: 2px 5px 10px  black;
+
+
+                &:hover{
+                    box-shadow: 5px 2px 10px  black;
+
+                }
+            }
+            .cancelbtn{
+                background-color: red;
+                color: white;
+            }
+            .completebtn{
+                background-color: yellow;
+                color: black;
+            }
+            .recievedbtn{
+                background-color: green;
+                color: white;
+            }
+
+            #status{
+                border: none;
+                outline: none;
+                background-color: rgba(170, 170, 170, 0.8);
+                padding:.2rem .5rem ;
+                text-align: center;
+                border-radius: .5rem;
+                font-size: 1rem;
+                font-weight: 800;
+                width: 50%;
+                cursor: auto;
+            }
+            .status1{
+                color: red;
+            }
+            .status2{
+                color: yellow;
+            }
+            .status3{
+                color: green;
+            }
+
+           
+        }
+        
+    }
+    .warning.card{
+        &::after{
+            content: "";
+            background-color: red;
+        }
+    }
+}

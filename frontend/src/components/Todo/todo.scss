@@ -1,0 +1,92 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#todo{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    transition: 1s;
+
+
+.todocontainer{
+        position: absolute;
+        width: 40vw;
+        min-height: 65vh;
+        box-shadow: 5px 10px 25px rgb(116, 116, 116);
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 50%;
+        left: 50%;
+        padding: 5vh;
+        border-radius: 1rem;
+        backdrop-filter: blur(5px);
+
+
+    
+        div{
+            margin-top: 1px;
+            padding: 1vh;
+            padding: .5rem;
+            display: flex;
+            border-radius: .3rem;
+            background-color: rgba(255, 255, 255, 0.5);
+            label{
+                width: 50%;
+                justify-self: center;
+            }
+            textarea{
+                resize: none;
+                border: none;
+
+            }
+            input,select{
+                height: 1.5rem;
+                width: 15rem;
+                text-align: center;
+                font-weight: 1200;
+                border-radius: .5rem;
+                border: none;
+            }
+            
+        }
+        .btns{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            .button{
+                width: 5rem;
+                height: 1.8rem;
+                border-radius: .5rem;
+                cursor: pointer;
+                font-weight: 800;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+
+                box-shadow: 1px 1px 5px black;
+
+                &:hover{
+                    box-shadow: 0 0 5px black;
+                    background-color: rgb(196, 196, 196);
+
+                }
+    
+                &:nth-child(1){
+                    margin-right: 10em;
+                }
+            }
+    
+            
+    
+          
+        }
+    
+    }
+}

@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+    
+}
+
+html{
+    background-image: url('../../../public/jaa.png');
+    background-color: rgb(221, 155, 155);
+    background-size: 100px;
+    height: 100vh;
+}
+
+#home{
+    backdrop-filter: blur(3px);
+    height: 100vh;
+
+
+    nav{    
+        height: 12vh;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: absolute;
+
+
+        .create{
+            width: 10rem;
+            justify-self: center;
+
+            text-align: center;
+            font-size: 1.4rem;
+            padding: .4rem;
+            border-radius: .5rem;
+            box-shadow: 3px 6px 15px black;
+            background: rgb(255, 160, 160);
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 6px 3px 15px black;
+                background: rgb(255, 160, 160,.5);
+
+            }
+        }
+
+        .dateToday{
+            justify-self: center;
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+    }
+}
