@@ -18,12 +18,12 @@ function Home() {
         <div className='create' onClick={handleShowTodo}>
           Create New
         </div>
+        <div className="dateToday">{`Date Today: ${dateToday}  `}</div>
 
       </nav>
 
-      <div>TEST</div>
 
-      //<Body/>
+      <Body/>
       {showTodo?<Todo handleShowTodo={handleShowTodo}/>:null}
 
 
