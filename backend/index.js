@@ -26,11 +26,11 @@ app.post('/create',(req,res)=>{
     .then (todolist => res.json(todolist))
     .catch (err => res.json(err))
 })
-//app.get('/getTodos',(req,res)=>{
- //   ToDoList.find({}).sort({status:1,deadline:1})
- //   .then (todos => {res.json(todos)})
- //   .catch (err => res.json(err))
-//})
+app.get('/getTodos',(req,res)=>{
+    ToDoList.find({}).sort({status:1,deadline:1})
+    .then (todos => {res.json(todos)})
+    .catch (err => res.json(err))
+})
 
 app.put('/updateRecord/:id',(req,res)=>{
     const id = req.params.id
