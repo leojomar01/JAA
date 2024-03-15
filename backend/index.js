@@ -32,6 +32,11 @@ app.get('/getTodos',(req,res)=>{
     .catch (err => res.json(err))
 })
 
+app.get('/',(req,res)=>{
+    .then (res => {console.log(res)})
+    .catch (err => res.json(err))
+})
+
 app.put('/updateRecord/:id',(req,res)=>{
     const id = req.params.id
     ToDoList.findByIdAndUpdate({_id:id},{status:req.body.status})
