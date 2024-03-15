@@ -8,7 +8,7 @@ const ToDoList = require('./models/ToDoList');
 const app = express();
 app.use(cors(
     {
-        origin:(""),
+        origin:("https://jaa-e5cw.vercel.app"),
         methods:("POST","GET"),
         credentials: true
     }
