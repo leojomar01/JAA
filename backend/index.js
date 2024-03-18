@@ -9,7 +9,7 @@ const app = express();
 app.use(cors(
     {
         origin:["https://jaa-e5cw.vercel.app"],
-        methods:["POST","GET"],
+        methods:["POST","GET","PUT"],
         credentials: true
     }
 ))
