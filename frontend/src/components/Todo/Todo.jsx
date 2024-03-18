@@ -11,7 +11,7 @@ function Todo({handleShowTodo}) {
         title:"",
         desc:"none",
         rush:"",
-        deadline:"",
+        deadline:"0000000",
         status:"1",
         time:'AM'
     })
