@@ -34,7 +34,7 @@ function Body() {
 
 
     async function getTosos(){
-        await axios.get('https://jaa-3294-api.vercel.app//getTodos')
+        await axios.get('http://localhost:3001/getTodos')
         .then(res => {
             console.log(res.data)
             setList(res.data)
@@ -47,14 +47,14 @@ function Body() {
 
       const handleSubmit = (status,id)=>{
         if(window.confirm('Are you Sure u want to save?')){
-            axios.put('https://jaa-3294-api.vercel.app/updateRecord/'+id,{status})
+            axios.put('http://localhost:3001/updateRecord/'+id,{status})
              window.location.reload()
         }
       }
 
       const handleDelete = (id)=>{
         if(window.confirm('Are you Sure u to delete this record?')){
-            axios.put('https://jaa-3294-api.vercel.app/deleteRecord/'+id)
+            axios.put('http://localhost:3001/deleteRecord/'+id)
              window.location.reload()
         }
       }

@@ -34,7 +34,7 @@ function Todo({handleShowTodo}) {
         if(window.confirm('Are you Sure u want to save?')){
             
 
-            axios.post('https://jaa-3294-api.vercel.app/create',{values})
+            axios.post('http://localhost:3001/create',{values})
                 .then(result => {console.log(result)
                 })
                 .catch(err => console.log(err))   

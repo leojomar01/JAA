@@ -2,7 +2,10 @@ const mongoose =require('mongoose');
 
 
 const ToDoSchema = new mongoose.Schema({
-    title:String,
+    title:{
+        type:String,
+        required:true
+    },
     desc: String,
     deadline:String,
     status:String,
@@ -10,4 +13,4 @@ const ToDoSchema = new mongoose.Schema({
     time:String
 })
 
-module.exports = mongoose.model('todos',ToDoSchema)
+module.exports = mongoose.model('Todos',ToDoSchema)
