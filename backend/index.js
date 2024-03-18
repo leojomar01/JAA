@@ -20,8 +20,8 @@ app.use( express.json())
 app.use("/",todoRoutes)
 
 
-// mongoose.connect('mongodb+srv://leojomar01:442RXm249VzWh2Jb@cluster0.kbueheb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-mongoose.connect('mongodb://localhost:27017/JAA')
+mongoose.connect('mongodb+srv://leojomar01:442RXm249VzWh2Jb@cluster0.kbueheb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+//mongoose.connect('mongodb://localhost:27017/JAA')
 .then(()=>{
     console.log("DB connected")
 })
