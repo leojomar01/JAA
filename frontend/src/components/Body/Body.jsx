@@ -48,17 +48,20 @@ function Body() {
       const handleSubmit = (status,id)=>{
         if(window.confirm('Are you Sure u want to save?')){
             axios.put('https://jaa-api.vercel.app/updateRecord/'+id,{status})
-            alert('record saved!')
-            
-             window.location.reload()
+           setTimeout(function(){
+                alert('record saved!')
+                window.location.reload()
+            },1000);
         }
       }
 
       const handleDelete = (id)=>{
         if(window.confirm('Are you Sure u to delete this record?')){
             axios.put('https://jaa-api.vercel.app/deleteRecord/'+id)
-                alert('record deleted!')
-             window.location.reload()
+             setTimeout(function(){
+                alert('Record Deleted!')
+                window.location.reload()
+            },1000);
         }
       }
 
