@@ -51,7 +51,7 @@ function Body() {
            setTimeout(function(){
                 alert('record saved!')
                 window.location.reload()
-            },1000);
+            },800);
         }
       }
 
@@ -61,7 +61,7 @@ function Body() {
              setTimeout(function(){
                 alert('Record Deleted!')
                 window.location.reload()
-            },1000);
+            },800);
         }
       }
 
