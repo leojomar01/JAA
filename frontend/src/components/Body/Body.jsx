@@ -68,52 +68,54 @@ function Body() {
   return (
     <div className='body' id='body'> 
 {
-    list.map((todo,i)=>(
-        <form action="" key={i} className={(dateToday===todo.deadline||todo.deadline==="0000000")? 'warning card':'card'}>
-            <input type="hidden" defaultValue={todo._id} />
-
-            <div className='title'>
-                {/* <label htmlFor="title">Title: </label> */}
-                <input type="text" name="title" id="title" defaultValue={todo.title} readOnly/>
-            </div>
-            
-
-            <div>
-                <label htmlFor="desc">Description: </label>
-                <textarea name="desc" id="" cols="30" rows="5" defaultValue={todo.desc} readOnly></textarea>   
-            </div>
-
-            <div>
-                <label htmlFor="date">Deadline: </label>
-                <input type="text" name="date" id="date" defaultValue={(todo.deadline==="0000000")?'ASAP':`${todo.deadline} ${todo.time}`} readOnly/>
-            </div>
-            
-            <div>
-                <label htmlFor="status">Status: </label>
-                <input type="text" name="status" id="status" className={`status${todo.status}`} defaultValue={
-                    (todo.status==='1')?'Pending. . .':(todo.status==='2')?'Done':(todo.status==='3')?'Received':null
-                    } readOnly/>
-            </div>
-
-            
-
-            <div>   
-                {(todo.status!=='3')?(<input type="button"  className='editbtn' value="Edit" onClick={()=>handleEdit(i)}/>):null}
-                {(todo.status==='1'|| todo.status==="2")?(<input type="button" hidden={true} className='cancelbtn' value="Cancel"onClick={()=>handleCancel(i)} />):null}
-                {(todo.status==='3')?(<input type="button" value="Delete" className='delete' onClick={()=>{handleDelete(todo._id)}} />):null}
-                {(todo.status==='1'||todo.status==='2')?(<input type="button" value="Done" className='completebtn' hidden={true} onClick={()=>{handleSubmit(2,todo._id)}}/> ):null}
-                {(todo.status==='1'|| todo.status==="2")?(<input type="button" value="Recieved" className='recievedbtn' hidden={true} onClick={()=>{handleSubmit(3,todo._id)}}/>):null}
-            </div>
-
-            
+    list.length !== 0?(
+        list.map((todo,i)=>(
+            <form action="" key={i} className={(dateToday===todo.deadline||todo.deadline==="0000000")? 'warning card':'card'}>
+                <input type="hidden" defaultValue={todo._id} />
+    
+                <div className='title'>
+                    {/* <label htmlFor="title">Title: </label> */}
+                    <input type="text" name="title" id="title" defaultValue={todo.title} readOnly/>
+                </div>
+                
+    
+                <div>
+                    <label htmlFor="desc">Description: </label>
+                    <textarea name="desc" id="" cols="30" rows="5" defaultValue={todo.desc} readOnly></textarea>   
+                </div>
+    
+                <div>
+                    <label htmlFor="date">Deadline: </label>
+                    <input type="text" name="date" id="date" defaultValue={(todo.deadline==="0000000")?'ASAP':`${todo.deadline} ${todo.time}`} readOnly/>
+                </div>
+                
+                <div>
+                    <label htmlFor="status">Status: </label>
+                    <input type="text" name="status" id="status" className={`status${todo.status}`} defaultValue={
+                        (todo.status==='1')?'Pending. . .':(todo.status==='2')?'Done':(todo.status==='3')?'Received':null
+                        } readOnly/>
+                </div>
+    
+                
+    
+                <div>   
+                    {(todo.status!=='3')?(<input type="button"  className='editbtn' value="Edit" onClick={()=>handleEdit(i)}/>):null}
+                    {(todo.status==='1'|| todo.status==="2")?(<input type="button" hidden={true} className='cancelbtn' value="Cancel"onClick={()=>handleCancel(i)} />):null}
+                    {(todo.status==='3')?(<input type="button" value="Delete" className='delete' onClick={()=>{handleDelete(todo._id)}} />):null}
+                    {(todo.status==='1'||todo.status==='2')?(<input type="button" value="Done" className='completebtn' hidden={true} onClick={()=>{handleSubmit(2,todo._id)}}/> ):null}
+                    {(todo.status==='1'|| todo.status==="2")?(<input type="button" value="Recieved" className='recievedbtn' hidden={true} onClick={()=>{handleSubmit(3,todo._id)}}/>):null}
+                </div>
+    
+                
+                    
+                    
                 
                 
-            
-            
-            
-        </form>
-    )
-    )
+                
+            </form>
+        )
+        )
+    ): (<p>No Records found</p>)
 }
         
     </div>
