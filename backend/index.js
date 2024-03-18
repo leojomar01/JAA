@@ -6,7 +6,13 @@ const ToDoList = require('./models/ToDoList');
 
 
 const app = express();
-app.use(cors())
+app.use(cors(
+    {
+        origin:("https://jaa-e5cw.vercel.app"),
+        methods:("POST","GET"),
+        credentials: true
+    }
+))
 app.use( express.json())
 
 mongoose.connect('mongodb+srv://leojomar01:442RXm249VzWh2Jb@cluster0.kbueheb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
