@@ -39,9 +39,14 @@ function Todo({handleShowTodo}) {
                 })
                 .catch(err => console.log(err))   
 
-             alert('Record Saved!')
-             window.location.reload()
-            handleShowTodo()
+            
+            
+
+            setTimeout(function(){
+                 alert('Record Saved!')
+                 window.location.reload()
+                handleShowTodo()
+            },800);
         }
     }
     const handleCancel = () =>{
