@@ -26,10 +26,12 @@ html{
         display: grid;
         grid-template-columns: 1fr 1fr;
         position: absolute;
+        top:0;
 
 
         .create{
             width: 10rem;
+            height: 2.2rem;
             justify-self: center;
 
             text-align: center;
