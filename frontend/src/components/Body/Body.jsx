@@ -70,7 +70,7 @@ function Body() {
 {
     list.length !== 0?(
         list.map((todo,i)=>(
-            <form action="" key={i} className={(dateToday<=todo.deadline||todo.deadline==="0000000")? 'warning card':'card'}>
+            <form action="" key={i} className={(dateToday>=todo.deadline||todo.deadline==="0000000")? 'warning card':'card'}>
                 <input type="hidden" defaultValue={todo._id} />
     
                 <div className='title'>
