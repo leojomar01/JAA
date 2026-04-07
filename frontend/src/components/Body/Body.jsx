@@ -49,20 +49,20 @@ function Body() {
         if(window.confirm('Are you Sure u want to save?')){
             axios.put('https://jaa-api.vercel.app/updateRecord/'+id,{status})
            setTimeout(function(){
-                alert('record saved!')
+               // alert('record saved!')
                 window.location.reload()
             },800);
         }
       }
 
       const handleDelete = (id)=>{
-        if(window.confirm('Are you Sure u to delete this record?')){
+      //  if(window.confirm('Are you Sure u to delete this record?')){
             axios.put('https://jaa-api.vercel.app/deleteRecord/'+id)
-             setTimeout(function(){
-                alert('Record Deleted!')
-                window.location.reload()
-            },800);
-        }
+             //setTimeout(function(){
+               // alert('Record Deleted!')
+              //  window.location.reload()
+          //  },800);
+      //  }
       }
 
   return (
