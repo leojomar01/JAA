@@ -81,7 +81,7 @@ function Body() {
     
                 <div>
                     <label htmlFor="desc">Messenger Link: </label>
-                    <a href={todo.desc}>Messagenger</a>
+                    <a href={todo.desc}>GC</a>
                     {/*<textarea name="desc" id="" cols="30" rows="5" defaultValue={todo.desc} readOnly></textarea>   */}
                 </div>
     

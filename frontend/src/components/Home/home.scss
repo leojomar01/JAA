@@ -7,8 +7,8 @@
 }
 
 html{
-    background-image: url('../../../public/jaa.png');
-    background-color: rgb(221, 155, 155);
+    // background-image: url('../../../public/jaa.png');
+    background-color: rgb(172, 172, 172);
     background-size: 100px;
     height: 100vh;
 }
@@ -39,7 +39,7 @@ html{
             padding: .4rem;
             border-radius: .5rem;
             box-shadow: 3px 6px 15px black;
-            background: rgb(255, 160, 160);
+            background: rgb(240, 240, 240);
             cursor: pointer;
 
             &:hover{
